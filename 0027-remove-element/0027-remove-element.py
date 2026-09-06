@@ -18,14 +18,6 @@ class Solution(object):
         
         return k
 
-
-
-
-
-
-
-
-
         """
         i = 0
         j = len(nums) - 1

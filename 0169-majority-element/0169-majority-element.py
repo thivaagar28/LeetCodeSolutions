@@ -13,9 +13,9 @@ class Solution(object):
 
         m=math.floor(n/2)
 
-        i,count=1,1
+        count=1
 
-        while i < n:
+        for i in range(1,n):
             if nums[i] != current_max:
                 count=1
                 current_max = nums[i]
@@ -28,17 +28,7 @@ class Solution(object):
 
         return current_max
 
-
-
-
-
-
-
-
-
-
-
-
+        """
         nums.sort()
         i = 1
         candidate = nums[0] #1st candidate
@@ -56,3 +46,4 @@ class Solution(object):
                 candidate = nums[i] #new candidate
                 count = 1
             i +=1
+        """

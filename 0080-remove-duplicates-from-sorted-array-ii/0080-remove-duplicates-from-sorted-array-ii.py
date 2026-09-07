@@ -4,6 +4,36 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
+
+        slow,fast,count=0,1,1
+        sz=len(nums)
+
+        while fast < sz:
+            if nums[fast] != nums[slow]:
+                slow+=1
+                nums[slow]=nums[fast]
+                count=1 #reset
+            else:
+                count+=1
+
+            if count==2:
+                slow+=1
+                nums[slow]=nums[fast]
+
+            fast+=1
+
+        return slow+1
+
+
+
+
+
+
+
+
+
+
+        """
         slow = 0
         fast = 1
         count = 1
@@ -23,3 +53,4 @@ class Solution(object):
             fast +=1
 
         return slow+1
+        """

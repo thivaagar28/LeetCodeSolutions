@@ -4,6 +4,22 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
+        #without sorting
+        num_dict={}
+        n=len(nums)
+        m = math.floor(n/2)
+
+        for i in range(0, n):
+            if nums[i] in num_dict:
+                num_dict[nums[i]]+=1
+            else:
+                num_dict[nums[i]]=1
+
+        for i in num_dict:
+            if num_dict[i] > m:
+                return i
+
+        """
         nums.sort()
         n=len(nums)
         current_max=nums[0]
@@ -27,7 +43,7 @@ class Solution(object):
             i+=1
 
         return current_max
-
+        """
         """
         nums.sort()
         i = 1

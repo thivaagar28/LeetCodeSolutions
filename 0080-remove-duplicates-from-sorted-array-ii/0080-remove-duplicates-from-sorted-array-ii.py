@@ -23,16 +23,7 @@ class Solution(object):
             fast+=1
 
         return slow+1
-
-
-
-
-
-
-
-
-
-
+        
         """
         slow = 0
         fast = 1

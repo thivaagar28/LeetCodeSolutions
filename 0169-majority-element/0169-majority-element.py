@@ -5,6 +5,41 @@ class Solution(object):
         :rtype: int
         """
         nums.sort()
+        n=len(nums)
+        current_max=nums[0]
+
+        if n<2:
+            return current_max
+
+        m=math.floor(n/2)
+
+        i,count=1,1
+
+        while i < n:
+            if nums[i] != current_max:
+                count=1
+                current_max = nums[i]
+            else:
+                count+=1
+                if count > m:
+                    return current_max
+
+            i+=1
+
+        return current_max
+
+
+
+
+
+
+
+
+
+
+
+
+        nums.sort()
         i = 1
         candidate = nums[0] #1st candidate
         count = 1
